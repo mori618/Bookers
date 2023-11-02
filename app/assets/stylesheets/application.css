@@ -18,22 +18,30 @@
   padding: 0;
   box-sizing: border-box;
 }
-.welcome_back{
+
+header{
+  height: 50px;
   background-color: black;
 }
-.welcome{
-  margin: 10px;
-  padding: 0 5px;
-  background-color: black;
+.flex{
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.head{
+  color: white;
   width: fit-content;
 }
 
-.sub{
-  margin: 30px;
-}
-p{
-  margin: 10px 0;
-}
 h1{
   color: white;
+  font-family: "garamond";
+}
+footer{
+  height: 100px;
+  background-color: black;
+}
+a{
+  text-decoration: none;
 }
