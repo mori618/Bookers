@@ -3,6 +3,11 @@
   <div class = "primary">
     <h2>詳細</h2>
   </div>
+  <div class="succes_box">
+    <p class="succes_message">
+      <%= flash[:notice] %>
+    </p>
+  </div>
   <div class="sub_show">
     <h3>タイトル</h3>
     <p><%= @book.title %></p>

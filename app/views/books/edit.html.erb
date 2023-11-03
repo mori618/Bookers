@@ -3,6 +3,11 @@
   <div class = "primary">
     <h2>編集</h2>
   </div>
+   <div class="succes_box">
+    <p class="succes_message">
+      <%= flash[:notice] %>
+    </p>
+  </div>
   <div class="sub_edit">
     <%= form_with model: @book do |f| %>
       <h4>タイトル</h4>
