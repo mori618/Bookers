@@ -1,3 +1,21 @@
-#編集.詳細と戻る
-<h1>Books#edit</h1>
-<p>Find me in app/views/books/edit.html.erb</p>
+<!--編集.詳細と戻る-->
+<div class = "body_edit">
+  <div class = "primary">
+    <h2>編集</h2>
+  </div>
+  <div class="sub_edit">
+    <%= form_with model: @book do |f| %>
+      <h4>タイトル</h4>
+      <%= f.text_field :title %>
+      <h4>本文</h4>
+       <%= f.text_area :body %>
+      <%= f.submit '保存' %>
+    <% end %>
+    <span class="button">
+      <%= link_to "詳細", book_path(@book.id) %>
+    </span>
+    <spam class ="button">
+      <a href="/books">戻る</a>
+    </span>
+  </div>
+</div>

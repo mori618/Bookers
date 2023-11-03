@@ -3,11 +3,16 @@
   <div class = "primary">
     <h2>詳細</h2>
   </div>
-  <h3>タイトル</h3>
-  <p><%= @book.title %></p>
-  <h3>感想</h3>
-  <p><%= @book.body %></p>
-  <div class ="button">
-    <a href="/books">戻る</a>
+  <div class="sub_show">
+    <h3>タイトル</h3>
+    <p><%= @book.title %></p>
+    <h3>感想</h3>
+    <p><%= @book.body %></p>
+    <span class="button">
+      <%= link_to "編集", edit_book_path(@book.id) %>
+    </span>
+    <span class ="button">
+      <a href="/books">戻る</a>
+    </span>
   </div>
 </div>
