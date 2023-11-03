@@ -6,7 +6,7 @@
   padding: 0;
   box-sizing: border-box;
 }
-.main_top{
+.body_top{
   height: 600px;
 }
 
@@ -27,7 +27,7 @@ p{
 h2{
   color: white;
 }
-.start{
+.button{
   width: fit-content;
   border-color: black;
   border-width: 2px;
@@ -38,4 +38,7 @@ h2{
 }
 .input_box{
   margin: 20px;
+}
+.body_show{
+  padding: 20px;
 }

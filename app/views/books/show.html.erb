@@ -1,3 +1,13 @@
-#詳細確認.編集と戻る
-<h1>Books#show</h1>
-<p>Find me in app/views/books/show.html.erb</p>
+<!--詳細確認.編集と戻る-->
+<div class = "body_show">
+  <div class = "primary">
+    <h2>詳細</h2>
+  </div>
+  <h3>タイトル</h3>
+  <p><%= @book.title %></p>
+  <h3>感想</h3>
+  <p><%= @book.body %></p>
+  <div class ="button">
+    <a href="/books">戻る</a>
+  </div>
+</div>
