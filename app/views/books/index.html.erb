@@ -1,3 +1,25 @@
-#一覧.投稿できる.hub
-<h1>Books#index</h1>
-<p>Find me in app/views/books/index.html.erb</p>
+<!--一覧.投稿できる.hub---->
+<div class="main_index">
+  <div class="primary">
+    <h2>Books</h2>
+  </div>
+  <div class ="index_box">
+
+    <% @books.each do |book| %>
+      <span><%= book.title %></span>
+      <span><%= book.body %></span>
+    <% end %>
+  </div>
+  <div class ="primary">
+    <h2>New book</h2>
+  </div>
+  <div class ="input_box">
+  <%= form_with model: @book, url: '/books', method: :post do |f| %>
+    <h4>本の題名</h4>
+    <%= f.text_field :title %>
+    <h4>感想</h4>
+    <%= f.text_area :body %>
+    <%= f.submit '投稿する' %>
+  <% end %>
+  </div>
+</div>
