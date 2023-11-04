@@ -1,7 +1,7 @@
 <!--編集.詳細と戻る-->
 <div class = "body_edit">
   <div class = "primary">
-    <h2>編集</h2>
+    <h2>Edit</h2>
   </div>
    <div class="succes_box">
     <p class="succes_message">
@@ -11,7 +11,7 @@
   <% if @book1.errors.any? %>
     <div class="error_box">
       <div class ="error_text_box">
-        <p class="error_text">error!編集できませんでした</p>
+        <p class="error_text">error!</p>
       </div>
       <ul class="error">
         <% @book1.errors.full_messages.each do |message| %>
@@ -22,17 +22,17 @@
   <% end %>
   <div class="sub_edit">
     <%= form_with model: @book do |f| %>
-      <h4>タイトル</h4>
+      <h4>Title</h4>
       <%= f.text_field :title %>
-      <h4>本文</h4>
+      <h4>Body</h4>
        <%= f.text_area :body %>
-      <%= f.submit '保存' %>
+      <%= f.submit 'Update Book' %>
     <% end %>
     <span class="button">
-      <%= link_to "詳細", book_path(@book.id) %>
+      <%= link_to "Show", book_path(@book.id) %>
     </span>
     <spam class ="button">
-      <a href="/books">戻る</a>
+      <a href="/books">Back</a>
     </span>
   </div>
 </div>
