@@ -8,6 +8,18 @@
       <%= flash[:notice] %>
     </p>
   </div>
+  <% if @book1.errors.any? %>
+    <div class="error_box">
+      <div class ="error_text_box">
+        <p class="error_text">error!編集できませんでした</p>
+      </div>
+      <ul class="error">
+        <% @book1.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+        <% end %>
+      </ul>
+    </div>
+  <% end %>
   <div class="sub_edit">
     <%= form_with model: @book do |f| %>
       <h4>タイトル</h4>

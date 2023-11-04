@@ -3,6 +3,12 @@
   <div class="primary">
     <h2>Books</h2>
   </div>
+  </div>
+   <div class="succes_box">
+    <p class="succes_message">
+      <%= flash[:notice] %>
+    </p>
+  </div>
   <table class ="index_box">
     <tr>
       <th>タイトル</th>
@@ -30,8 +36,10 @@
   </div>
   <% if @book.errors.any? %>
     <div class="error_box">
-      <p class "error_text">投稿できませんでした</p>
-      <ul>
+      <div class="error_text_box">
+        <p class ="error_text">error!投稿できませんでした</p>
+      </div>
+      <ul class="error">
         <% @book.errors.full_messages.each do |message| %>
         <li><%= message %></li>
         <% end %>

@@ -81,11 +81,19 @@ border-bottom: dotted 2px;
 }
 .error_box{
   margin: 30px;
-  padding: 10px;
   border: 5px solid red;
   width: fit-content;
+  height: fit-content;
 }
-ul{
+.error_text_box{
+  background-color: red;
+}
+.error_text{
+  margin: 0;
+  background-color: red;
+  color: white;
+}
+.error{
   list-style: none;
 }
 .succes_message{

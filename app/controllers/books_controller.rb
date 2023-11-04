@@ -22,18 +22,25 @@ class BooksController < ApplicationController
 
   def edit
     @book = Book.find(params[:id])
+    @book1 = Book.find(params[:id])
   end
 
   def update
-    book = Book.find(params[:id])
-    book.update(book_params)
-    flash[:notice] = "編集できました！succesfuliy updated!"
-    redirect_to book_path(book.id)
+    @book1 = Book.find(params[:id])
+    if @book1.update(book_params)
+      flash[:notice] = "編集できました！succesfuliy updated!"
+      redirect_to book_path(@book1.id)
+    else
+      @book = Book.find(params[:id])
+      render :edit
+    end
+
   end
 
   def destroy
     book= Book.find(params[:id])
     book.destroy
+    flash[:notice] = "削除できました！succesfuliy destroyed!"
     redirect_to '/books'
   end
 
